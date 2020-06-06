@@ -1,8 +1,8 @@
-site: https://larepublica.co
 xpath_expressions:
   news_list:
+    site: https://larepublica.co
     links: //h2[@class="headline"]/a/@href
   news_detail:
     title: //h1[@class="headline"]/a/text()
-    description: //div[@class="lead"]/p/text()
+    summary: //div[@class="lead"]/p/text()
     body_paragraphs: //div[@class="articleWrapper  "]/p[not(@class)]/text()
