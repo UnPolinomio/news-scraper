@@ -25,7 +25,7 @@ def get_links():
         parsed = html.fromstring(content)
         links = parsed.xpath(links_xpath)
 
-        logging.info(f'\tOk: {site}')
+        logging.info(f'\tOk')
 
         return links
     except Exception as error:

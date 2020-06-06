@@ -30,7 +30,7 @@ def news_detail_by_link(link):
         summary = parsed.xpath(summary_xpath)[0]
         body_paragraphs = parsed.xpath(body_paragraphs_xpath)
 
-        logging.info(f'\tOk {link}')
+        logging.info(f'\tOk')
 
         return {
             'title': title,
