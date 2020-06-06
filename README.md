@@ -2,16 +2,16 @@
 This is a news site python-based web scraper.
 
 ## Use
-1. Clone this repo.
+1. Clone this repo and move to repo folder.
 2. `python -m venv .env`
 3. `source .env/bin/activate`
-4. `pip install -r requirements`
-5. `python main.py`
+4. `pip install -r requirements.txt`
+5. `python main.py` and wait some minutes.
 
 ## Settings file
 Settings file is scraper_config.yaml.
 
-There are a news-sites list. Follow the current file structure.
+There is a news-sites list. Follow the current file structure.
 
 For every site, config is:
 ### General
