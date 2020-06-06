@@ -1,8 +1,18 @@
 xpath_expressions:
-  news_list:
-    site: https://larepublica.co
-    links: //h2[@class="headline"]/a/@href
-  news_detail:
-    title: //h1[@class="headline"]/a/text()
-    summary: //div[@class="lead"]/p/text()
-    body_paragraphs: //div[@class="articleWrapper  "]/p[not(@class)]/text()
+  
+  - sitename: larepublica
+    news_list:
+      site: https://larepublica.co
+      links: //h2[@class="headline"]/a/@href
+    news_detail:
+      title: //h1[@class="headline"]/a/text()
+      summary: //div[@class="lead"]/p/text()
+      body_paragraphs: //div[@class="articleWrapper  "]/p[not(@class)]/text()
+  - sitename: eleconomista
+    news_list:
+      site: https://www.eleconomista.com.mx/
+      links: //h2[@class="titulo"]/a/@href
+    news_detail:
+      title: //div[@class="title"]/h1/text()
+      summary: //div[@class="title"]/child::p/text()
+      body_paragraphs: //div[@class="entry-body"]/p[not(@class)]/text()

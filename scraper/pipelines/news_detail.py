@@ -1,13 +1,12 @@
 import requests
 from lxml import html
-from scraper.utils.config import get_config
 import logging
 
 logging.getLogger().setLevel(logging.INFO)
 
-XPATH_EXPRESSIONS = get_config()['xpath_expressions']['news_detail']
 
-def news_detail_by_link(link):
+def news_detail_by_link(link, config):
+    XPATH_EXPRESSIONS = config['news_detail']
     try:
         # Config
         title_xpath = XPATH_EXPRESSIONS['title']

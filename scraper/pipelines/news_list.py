@@ -1,14 +1,14 @@
 import requests
 from lxml import html
-from scraper.utils.config import get_config
 from scraper.utils.urls import urljoin_for_urls_list
 import logging
 
 logging.getLogger().setLevel(logging.INFO)
 
-XPATH_EXPRESSIONS = get_config()['xpath_expressions']['news_list']
 
-def get_links():
+def get_links(config):
+    XPATH_EXPRESSIONS = config['news_list']
+
     try:
         # Config
         site = XPATH_EXPRESSIONS['site']
