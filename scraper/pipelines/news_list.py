@@ -1,6 +1,7 @@
 import requests
 from lxml import html
 from scraper.utils.config import get_config
+from scraper.utils.urls import urljoin_for_urls_list
 import logging
 
 logging.getLogger().setLevel(logging.INFO)
@@ -27,7 +28,7 @@ def get_links():
 
         logging.info(f'\tOk')
 
-        return links
+        return urljoin_for_urls_list(site, links)
     except Exception as error:
         logging.error(error)
         return []
